@@ -1,0 +1,135 @@
+<section class="modulex-belediye-e-hizmet-dizini{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-belediye-e-hizmet-dizini-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* belediye-e-hizmet-dizini — module ailesinde alfabetik dizin ve arama yok; arac-ilan-filtre çok alanlı form + kart ızgarasıdır. Bu modül sunucuda harf gruplarına ayrılmış metin dizinidir (harf çubuğu çapası, aksan duyarsız tek alanlı arama, rozetli hizmet satırları); body/sss-canli-arama'nın soru-cevap aramasından farklı olarak gruplar alfabe sırasıyla kurulur. */
+  .modulex-belediye-e-hizmet-dizini { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-belediye-e-hizmet-dizini *, .modulex-belediye-e-hizmet-dizini *::before, .modulex-belediye-e-hizmet-dizini *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-belediye-e-hizmet-dizini :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-belediye-e-hizmet-dizini :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-belediye-e-hizmet-dizini :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-belediye-e-hizmet-dizini :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-belediye-e-hizmet-dizini img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-belediye-e-hizmet-dizini) img { height: auto; }
+  .modulex-belediye-e-hizmet-dizini [hidden] { display: none !important; }
+  .modulex-belediye-e-hizmet-dizini :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-belediye-e-hizmet-dizini :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-belediye-e-hizmet-dizini-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-belediye-e-hizmet-dizini-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-belediye-e-hizmet-dizini--bassiz .modulex-belediye-e-hizmet-dizini-bas { display: none; }
+  .modulex-belediye-e-hizmet-dizini-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-belediye-e-hizmet-dizini-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-belediye-e-hizmet-dizini-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-belediye-e-hizmet-dizini-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-belediye-e-hizmet-dizini-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-belediye-e-hizmet-dizini-dugme:hover { transform: translateY(-2px); }
+  .modulex-belediye-e-hizmet-dizini-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-belediye-e-hizmet-dizini-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-belediye-e-hizmet-dizini-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-belediye-e-hizmet-dizini-giris { display: grid; gap: 14px; max-width: 740px; margin-block-end: clamp(24px, 3vw, 36px); }
+  .modulex-belediye-e-hizmet-dizini-dizin { display: grid; gap: 18px; }
+  .modulex-belediye-e-hizmet-dizini-arama { display: flex; align-items: center; gap: 14px; padding: 10px; border-radius: 16px; background: --bg--; box-shadow: 0 18px 40px -30px color-mix(in srgb, --text-- 70%, transparent); }
+  .modulex-belediye-e-hizmet-dizini-akutu { display: flex; flex: 1; align-items: center; gap: 10px; min-width: 0; padding-inline: 12px; border: 2px solid --cizgi--; border-radius: 12px; transition: border-color 0.2s ease; }
+  .modulex-belediye-e-hizmet-dizini-akutu:focus-within { border-color: --accent--; }
+  .modulex-belediye-e-hizmet-dizini-aik { color: --accentInk--; }
+  .modulex-belediye-e-hizmet-dizini-agirdi { width: 100%; min-height: 48px; border: 0; background: transparent; color: --text--; font: inherit; font-size: 1.02rem; }
+  .modulex-belediye-e-hizmet-dizini-agirdi:focus { outline: none; }
+  .modulex-belediye-e-hizmet-dizini-asay { flex: none; padding-inline: 8px; color: --muted--; font-size: 0.88rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+  .modulex-belediye-e-hizmet-dizini-gizli { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .modulex-belediye-e-hizmet-dizini-harfler { display: flex; flex-wrap: wrap; gap: 4px; }
+  .modulex-belediye-e-hizmet-dizini-harf { display: grid; place-items: center; min-width: 40px; height: 40px; padding-inline: 6px; border: 1.5px solid --cizgi--; border-radius: 8px; background: --bg--; color: --text--; font-weight: 850; text-decoration: none; transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+  .modulex-belediye-e-hizmet-dizini-harf:hover { background-color: --accent--; color: --accentText--; transform: translateY(-2px); }
+  .modulex-belediye-e-hizmet-dizini-harf.modulex-belediye-e-hizmet-dizini--bos { background-color: transparent; color: --muted--; text-decoration: line-through; pointer-events: none; }
+  .modulex-belediye-e-hizmet-dizini-gruplar { display: grid; gap: 22px; }
+  .modulex-belediye-e-hizmet-dizini-grup { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 18px; align-items: start; scroll-margin-block-start: 150px; }
+  .modulex-belediye-e-hizmet-dizini-gharf { position: sticky; inset-block-start: 150px; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; background: --vurguBg--; color: --vurguText--; font-family: var(--mx-font-heading, inherit); font-size: 1.7rem; font-weight: 850; }
+  .modulex-belediye-e-hizmet-dizini-hizmetler { display: grid; gap: 8px; }
+  .modulex-belediye-e-hizmet-dizini-hiz { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 16px 18px; border-radius: 14px; background: --bg--; transition: box-shadow 0.25s ease, transform 0.25s ease; }
+  .modulex-belediye-e-hizmet-dizini-hiz:hover { box-shadow: 0 12px 26px -22px color-mix(in srgb, --text-- 70%, transparent); transform: translateY(-2px); }
+  .modulex-belediye-e-hizmet-dizini-hik { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: --kartBg--; color: --accentInk--; font-size: 24px; }
+  .modulex-belediye-e-hizmet-dizini-hyazi { display: grid; gap: 2px; min-width: 0; }
+  .modulex-belediye-e-hizmet-dizini-had { font-size: 1.02rem; font-weight: 800; }
+  .modulex-belediye-e-hizmet-dizini-hbag { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; }
+  .modulex-belediye-e-hizmet-dizini-hbag .material-symbols-outlined { font-size: 18px; color: --accentInk--; transition: transform 0.2s ease; }
+  .modulex-belediye-e-hizmet-dizini-hbag:hover .material-symbols-outlined { transform: translateX(3px); }
+  [dir="rtl"] .modulex-belediye-e-hizmet-dizini-hbag:hover .material-symbols-outlined { transform: translateX(-3px) scaleX(-1); }
+  .modulex-belediye-e-hizmet-dizini-hbirim { color: --accentInk--; font-size: 0.78rem; font-weight: 750; letter-spacing: 0.04em; }
+  .modulex-belediye-e-hizmet-dizini-hacik { color: --muted--; font-size: 0.88rem; }
+  .modulex-belediye-e-hizmet-dizini-hrozet { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; max-width: 280px; }
+  .modulex-belediye-e-hizmet-dizini-hrozet li { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 999px; background: --kartBg--; font-size: 0.76rem; font-weight: 700; white-space: nowrap; }
+  .modulex-belediye-e-hizmet-dizini-hrozet .material-symbols-outlined { font-size: 16px; }
+  .modulex-belediye-e-hizmet-dizini-hrozet li.modulex-belediye-e-hizmet-dizini-tur--on { background: --accent--; color: --accentText--; }
+  .modulex-belediye-e-hizmet-dizini-hrozet li.modulex-belediye-e-hizmet-dizini-tur--yy { box-shadow: inset 0 0 0 1.5px --text--; background: transparent; }
+  .modulex-belediye-e-hizmet-dizini-ayok { padding: 24px; color: --muted--; text-align: center; }
+  .modulex-belediye-e-hizmet-dizini-dizin + .modulex-belediye-e-hizmet-dizini-cta { margin-block-start: 28px; }
+  @media (max-width: 768px) {
+    .modulex-belediye-e-hizmet-dizini-grup { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+    .modulex-belediye-e-hizmet-dizini-gharf { position: static; width: 44px; height: 44px; font-size: 1.3rem; }
+    .modulex-belediye-e-hizmet-dizini-hiz { grid-template-columns: auto minmax(0, 1fr); }
+    .modulex-belediye-e-hizmet-dizini-hrozet { grid-column: 1 / -1; justify-content: flex-start; max-width: none; }
+    .modulex-belediye-e-hizmet-dizini-harf { min-width: 34px; height: 34px; }
+  }
+  .modulex-belediye-e-hizmet-dizini-bag { color: inherit; text-decoration: none; }
+  .modulex-belediye-e-hizmet-dizini-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-belediye-e-hizmet-dizini-mbaslik { font-size: 1.05rem; font-weight: 700; }
+  .modulex-belediye-e-hizmet-dizini-mmetin { color: --muted--; font-size: 0.95rem; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-belediye-e-hizmet-dizini :is(.modulex-belediye-e-hizmet-dizini-baslik, .modulex-belediye-e-hizmet-dizini-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-belediye-e-hizmet-dizini-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-belediye-e-hizmet-dizini { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-belediye-e-hizmet-dizini *, .modulex-belediye-e-hizmet-dizini *::before, .modulex-belediye-e-hizmet-dizini *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-belediye-e-hizmet-dizini";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const dizinAra = (s, P) => {
+        const g = s.querySelector("[data-ara-gir]");
+        const r = [...s.querySelectorAll("[data-ara]")];
+        if (!g || !r.length) return;
+        s.classList.add(P + "--js");
+        const kap = s.querySelector("[data-akap]");
+        if (kap) kap.hidden = false;
+        const dl = document.documentElement.lang || undefined;
+        const norm = (t) => { let v = String(t || ""); try { v = v.toLocaleLowerCase(dl); } catch (e) { v = v.toLowerCase(); } return v.normalize("NFD").replace(/[̀-ͯ]/g, ""); };
+        r.forEach((x) => { x.dataset.n = norm(x.dataset.ara); });
+        const gr = [...s.querySelectorAll("[data-grup]")];
+        const hr = [...s.querySelectorAll("[data-harf]")];
+        const say = s.querySelector("[data-asay]");
+        const yok = s.querySelector("[data-ayok]");
+        const f = (n) => { try { return new Intl.NumberFormat(dl).format(n); } catch (e) { return String(n); } };
+        const uygula = () => {
+          const q = norm(g.value).trim();
+          let n = 0;
+          r.forEach((x) => { const v = !q || x.dataset.n.includes(q); x.hidden = !v; if (v) n++; });
+          gr.forEach((G) => {
+            const bos = ![...G.querySelectorAll("[data-ara]")].some((x) => !x.hidden);
+            G.hidden = bos;
+            const h = hr.find((a) => a.dataset.harf === G.dataset.grup);
+            if (h) { h.classList.toggle(P + "--bos", bos); h.tabIndex = bos ? -1 : 0; }
+          });
+          if (say) say.textContent = f(n) + " / " + f(r.length);
+          if (yok) yok.hidden = n > 0;
+        };
+        g.addEventListener("input", uygula);
+        uygula();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      dizinAra(s, P, az);
+    });
+  })();
+</script>

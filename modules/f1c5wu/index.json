@@ -1,0 +1,61 @@
+{
+  "name": "Belediye e-Hizmet Dizini — A–Z harf çubuğu, canlı arama, başvuru türü rozetli hizmet satırları",
+  "description": "Üstte yapışkan arama kutusu ve «n / t» sayacı, altında hizmet adlarının ilk harflerinden türeyen A–Z harf çubuğu (sayfa dilinin alfabe sırası, `Intl.Collator`). Hizmetler harf başlıklı gruplar hâlinde: ikon, ad (bağlantı), birim, açıklama, başvuru türü rozeti (çevrim içi / yüz yüze), gerekli belge sayısı, sonuçlanma süresi. Arama aksan ve büyük/küçük harf duyarsızdır; boşalan harfler çubukta soluklaşır. Kayıt alanları: `birim` · `online` (true/false) · `belge` · `sure`. JS yokken arama gizli, harf çubuğu bağlantı olarak çalışır. module ailesinde alfabetik dizin ve arama yok; arac-ilan-filtre çok alanlı form + kart ızgarasıdır. Bu modül sunucuda harf gruplarına ayrılmış metin dizinidir (harf çubuğu çapası, aksan duyarsız tek alanlı arama, rozetli hizmet satırları); body/sss-canli-arama'nın soru-cevap aramasından farklı olarak gruplar alfabe sırasıyla kurulur. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık ve metin yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "account_balance",
+  "category": "module",
+  "subCategory": "az-service-index",
+  "tags": [
+    "module",
+    "directory",
+    "a-z",
+    "search",
+    "public-services",
+    "interactive",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1160px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "img": "",
+    "img2": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "cta2_ad": "",
+    "cta2_url": "",
+    "bg": "var(--mx-site-surface, #f6f7f9)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+    "kartBg": "var(--mx-site-bg, #ffffff)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "aramaAd": "",
+    "onlineAd": "",
+    "yuzyuzeAd": "",
+    "belgeAd": "",
+    "harfAd": "",
+    "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data",
+    "alanlar": {
+      "ikon": "madde ikonu (Material Symbols)",
+      "baslik": "madde başlığı (dil sözlüğü, zorunlu)",
+      "metin": "madde metni (dil sözlüğü)",
+      "url": "madde bağlantısı"
+    }
+  }
+}

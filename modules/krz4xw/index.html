@@ -1,0 +1,115 @@
+<footer class="modulex-alt-baski-kunye{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-alt-baski-kunye-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</footer>
+
+<style>
+  /* alt-baski-kunye — Footer bir yayın künyesi: sütun/kart yok, bilgi tanım listesi satırlarında noktalı öncü çizgiyle değere bağlanır (içindekiler sayfası gibi) — telefonda öncü çizgi kalkar, etiket değerin üstüne geçer; hover satırı ve öncüyü vurgu rengine boyar. */
+  .modulex-alt-baski-kunye { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-alt-baski-kunye *, .modulex-alt-baski-kunye *::before, .modulex-alt-baski-kunye *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-alt-baski-kunye :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-alt-baski-kunye :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-alt-baski-kunye :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-alt-baski-kunye :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-alt-baski-kunye img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-alt-baski-kunye) img { height: auto; }
+  .modulex-alt-baski-kunye [hidden] { display: none !important; }
+  .modulex-alt-baski-kunye :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-alt-baski-kunye :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-alt-baski-kunye-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-alt-baski-kunye-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-alt-baski-kunye--bassiz .modulex-alt-baski-kunye-bas { display: none; }
+  .modulex-alt-baski-kunye-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-alt-baski-kunye-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-alt-baski-kunye-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-alt-baski-kunye-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-alt-baski-kunye-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-alt-baski-kunye-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-baski-kunye-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-alt-baski-kunye-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-alt-baski-kunye-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-alt-baski-kunye-bag { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+  .modulex-alt-baski-kunye-bag:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-alt-baski-kunye-bag[aria-current="page"] { color: --accentInk--; font-weight: 700; }
+  .modulex-alt-baski-kunye-logo { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+  .modulex-alt-baski-kunye-logo img { width: auto; max-height: --logoH--; }
+  .modulex-alt-baski-kunye-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-alt-baski-kunye-bbaslik { margin-block-end: 14px; color: --accentInk--; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-alt-baski-kunye-sayfalar, .modulex-alt-baski-kunye-baglantilar, .modulex-alt-baski-kunye-iletisim, .modulex-alt-baski-kunye-yasal { display: grid; gap: 9px; }
+  .modulex-alt-baski-kunye-il { display: flex; align-items: flex-start; gap: 10px; }
+  .modulex-alt-baski-kunye-il-ic { display: grid; gap: 2px; }
+  .modulex-alt-baski-kunye-il-etiket { color: --muted--; font-size: 0.8rem; }
+  .modulex-alt-baski-kunye-il-ikon { flex: none; color: --accentInk--; font-size: 20px; }
+  .modulex-alt-baski-kunye-saatler { display: grid; gap: 6px; }
+  .modulex-alt-baski-kunye-saat { display: flex; justify-content: space-between; gap: 16px; }
+  .modulex-alt-baski-kunye-saat dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .modulex-alt-baski-kunye-sosyal { display: flex; flex-wrap: wrap; gap: 10px; }
+  .modulex-alt-baski-kunye-sosyal-a { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid --cizgi--; border-radius: 50%; color: inherit; font-size: 18px; transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+  .modulex-alt-baski-kunye-sosyal-a:hover { border-color: --accent--; background: --accent--; color: --accentText--; transform: translateY(-2px); }
+  .modulex-alt-baski-kunye-hakkinda { max-width: 46ch; color: --muted--; }
+  .modulex-alt-baski-kunye-telif { display: flex; flex-wrap: wrap; gap: 4px 14px; color: --muted--; font-size: 0.9rem; }
+  .modulex-alt-baski-kunye-dil:empty { display: none; }
+  .modulex-alt-baski-kunye-yukari { display: inline-grid; place-items: center; flex: none; width: 46px; height: 46px; border-radius: 50%; background: --accent--; color: --accentText--; text-decoration: none; transition: transform 0.25s ease; }
+  .modulex-alt-baski-kunye-yukari:hover { transform: translateY(-3px); }
+  .modulex-alt-baski-kunye-bulten { display: grid; gap: 8px; }
+  .modulex-alt-baski-kunye-nl-etiket { font-size: 0.9rem; font-weight: 700; }
+  .modulex-alt-baski-kunye-nl-satir { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-alt-baski-kunye-nl-girdi { flex: 1 1 200px; min-width: 0; min-height: 48px; padding: 10px 18px; border: 1px solid --cizgi--; border-radius: 999px; background: --bg--; color: --text--; font: inherit; }
+  .modulex-alt-baski-kunye-nl-dugme { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 10px 22px; border: 0; border-radius: 999px; background: --accent--; color: --accentText--; font: inherit; font-weight: 700; transition: transform 0.2s ease; }
+  .modulex-alt-baski-kunye-nl-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-baski-kunye-nl-dugme .material-symbols-outlined { font-size: 18px; }
+  .modulex-alt-baski-kunye-nl-durum:empty { display: none; }
+  .modulex-alt-baski-kunye-nl-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+  .modulex-alt-baski-kunye-nl-metin { color: --muted--; }
+
+  .modulex-alt-baski-kunye-bk-sayfa { display: grid; gap: clamp(26px, 4vw, 40px); max-width: 780px; margin-inline: auto; font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", serif; }
+  .modulex-alt-baski-kunye-bk-sus { display: flex; align-items: center; justify-content: center; gap: 12px; }
+  .modulex-alt-baski-kunye-bk-sus::before, .modulex-alt-baski-kunye-bk-sus::after { content: ""; flex: 0 1 90px; height: 1px; background: --text--; }
+  .modulex-alt-baski-kunye-bk-sus span { width: 7px; height: 7px; background: --accent--; transform: rotate(45deg); transition: transform 0.6s cubic-bezier(0.3, 1.3, 0.5, 1); }
+  .modulex-alt-baski-kunye-bk-sus span:nth-child(2) { width: 11px; height: 11px; }
+  .modulex-alt-baski-kunye-bk-sayfa:hover .modulex-alt-baski-kunye-bk-sus span { transform: rotate(225deg); }
+  .modulex-alt-baski-kunye-bk-kimlik { display: grid; justify-items: center; gap: 14px; text-align: center; }
+  .modulex-alt-baski-kunye-bk-kimlik .modulex-alt-baski-kunye-ad { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; letter-spacing: 0.04em; }
+  .modulex-alt-baski-kunye-bk-giris { max-width: 54ch; color: --muted--; font-size: 1.08rem; font-style: italic; line-height: 1.7; }
+  .modulex-alt-baski-kunye-bk-ara { display: flex; align-items: center; gap: 16px; margin-block-end: 10px; color: --accentInk--; font-size: 0.95rem; font-weight: 700; font-variant-caps: all-small-caps; letter-spacing: 0.22em; }
+  .modulex-alt-baski-kunye-bk-ara::before, .modulex-alt-baski-kunye-bk-ara::after { content: ""; flex: 1; height: 1px; background: --cizgi--; }
+  .modulex-alt-baski-kunye-bk-kunye { display: grid; }
+  .modulex-alt-baski-kunye-bk-satir { display: flex; align-items: baseline; gap: 12px; padding-block: 7px; transition: color 0.25s ease; }
+  .modulex-alt-baski-kunye-bk-satir dt { flex: none; max-width: 40%; color: --muted--; font-variant-caps: all-small-caps; letter-spacing: 0.08em; }
+  .modulex-alt-baski-kunye-bk-nokta { flex: 1 1 24px; min-width: 24px; border-block-end: 2px dotted --cizgi--; transform: translateY(-5px); transition: border-color 0.25s ease; }
+  .modulex-alt-baski-kunye-bk-satir dd { flex: 0 1 auto; min-width: 0; margin: 0; font-weight: 600; text-align: end; }
+  .modulex-alt-baski-kunye-bk-satir:hover { color: --accentInk--; }
+  .modulex-alt-baski-kunye-bk-satir:hover .modulex-alt-baski-kunye-bk-nokta { border-block-end-color: --accent--; }
+  .modulex-alt-baski-kunye-bk-dizi { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; }
+  .modulex-alt-baski-kunye-bk-dizi > * + *::before { content: "·"; padding-inline: 9px; color: --muted--; }
+  .modulex-alt-baski-kunye-bk-satir .modulex-alt-baski-kunye-sosyal { justify-content: flex-end; gap: 8px; }
+  .modulex-alt-baski-kunye-bk-satir .modulex-alt-baski-kunye-sosyal-a { width: 36px; height: 36px; font-size: 16px; }
+  .modulex-alt-baski-kunye-bk-son { display: grid; justify-items: center; gap: 12px; padding-block-start: 22px; border-block-start: 3px double --cizgi--; text-align: center; }
+  .modulex-alt-baski-kunye-bk-telif { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; color: --muted--; font-size: 0.95rem; font-variant-caps: all-small-caps; letter-spacing: 0.1em; }
+  .modulex-alt-baski-kunye-bk-yasal { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; font-size: 0.92rem; font-style: italic; }
+  .modulex-alt-baski-kunye-bk-yukari { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid --text--; border-radius: 50%; color: inherit; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; }
+  .modulex-alt-baski-kunye-bk-yukari:hover { background-color: --text--; color: --bg--; transform: translateY(-3px); }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-baski-kunye :is(.modulex-alt-baski-kunye-bk-ara, .modulex-alt-baski-kunye-bk-satir dt, .modulex-alt-baski-kunye-bk-telif) { letter-spacing: 0; }
+  @media (max-width: 768px) {
+    .modulex-alt-baski-kunye-bk-satir { flex-wrap: wrap; gap: 2px 10px; }
+    .modulex-alt-baski-kunye-bk-satir dt { flex-basis: 100%; max-width: none; }
+    .modulex-alt-baski-kunye-bk-nokta { display: none; }
+    .modulex-alt-baski-kunye-bk-satir dd { text-align: start; }
+    .modulex-alt-baski-kunye-bk-dizi, .modulex-alt-baski-kunye-bk-satir .modulex-alt-baski-kunye-sosyal { justify-content: flex-start; }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-baski-kunye :is(.modulex-alt-baski-kunye-baslik, .modulex-alt-baski-kunye-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-baski-kunye-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-alt-baski-kunye { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-alt-baski-kunye *, .modulex-alt-baski-kunye *::before, .modulex-alt-baski-kunye *::after { animation: none !important; transition: none !important; }
+  }
+</style>

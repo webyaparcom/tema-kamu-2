@@ -1,0 +1,47 @@
+{
+  "name": {
+    "tr": "Rehber",
+    "en": "Directory",
+    "ar": "الدليل"
+  },
+  "status": "play",
+  "category": "",
+  "id": "iletisim",
+  "url": "",
+  "path": "iletisim",
+  "index": 2,
+  "icon": "contact_phone",
+  "desing": {
+    "header": [],
+    "body": [
+      "6gaify",
+      "k8mp01"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Birim ve dahili numara rehberi (kurgusal).",
+    "en": "Department and extension directory (fictional).",
+    "ar": "دليل الوحدات والتحويلات (افتراضي)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Rehber",
+    "en": "Directory",
+    "ar": "الدليل"
+  },
+  "keyword": {
+    "tr": "birim rehberi, telefon",
+    "en": "directory, phone",
+    "ar": "دليل، هاتف"
+  },
+  "text": {},
+  "update": "2026-11-16T22:49:36.979Z",
+  "date": "2026-10-30"
+}

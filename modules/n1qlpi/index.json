@@ -1,0 +1,53 @@
+{
+  "name": "Hizmet İkon Madalyon — dönen halkalı ikon madalyonları",
+  "description": "Vurgu zeminde kutusuz hizmetler: her hizmet kesik çizgili halkası olan bir ikon madalyonu, altında ad, açıklama ve maddeler; üzerine gelince halka döner. Kart çerçevesi yok; ikon madalyonları ve ortalanmış metinle rozet/amblem dili, renkli zemin üzerinde. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "workspace_premium",
+  "category": "hizmet",
+  "subCategory": "medallion",
+  "tags": [
+    "hizmet",
+    "medallion",
+    "icons",
+    "centered",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-primary, #2563eb)",
+    "text": "var(--mx-site-primary-contrast, #ffffff)",
+    "muted": "color-mix(in srgb, var(--mx-site-primary-contrast, #ffffff) 92%, var(--mx-site-primary, #2563eb))",
+    "kartBg": "color-mix(in srgb, var(--mx-site-primary-contrast, #ffffff) 10%, transparent)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-primary-contrast, #ffffff) 28%, transparent)",
+    "accent": "var(--mx-site-primary-contrast, #ffffff)",
+    "accentInk": "var(--mx-site-primary-contrast, #ffffff)",
+    "accentText": "var(--mx-site-primary, #2563eb)",
+    "vurguBg": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguText": "var(--mx-site-primary, #2563eb)",
+    "bgcolor": "var(--mx-site-primary, #2563eb)",
+    "color": "var(--mx-site-primary-contrast, #ffffff)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "baslik": "hizmet adı — dil sözlüğü (zorunlu; eski `ad`)",
+      "metin": "kısa açıklama — dil sözlüğü (eski `ozet`)",
+      "maddeler": "kapsam maddeleri — dil sözlüğü dizisi",
+      "ikon": "Material Symbols adı",
+      "img": "görsel yolu",
+      "alt": "görsel alt metni — dil sözlüğü",
+      "fiyat": "fiyat / «…'den başlayan» — dil sözlüğü ya da düz metin",
+      "url": "detay sayfası bağlantısı",
+      "linkMetin": "bağlantı yazısı (yoksa desing `linkMetin` / eski `ctaLabel`, o da yoksa «Devamını oku»)"
+    }
+  }
+}
