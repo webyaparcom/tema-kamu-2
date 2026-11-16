@@ -1,0 +1,48 @@
+{
+  "name": {
+    "tr": "Projeler",
+    "en": "Projects",
+    "ar": "المشاريع"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "timeline",
+  "desing": {
+    "header": [],
+    "body": [
+      "z5za87",
+      "rbzxg1",
+      "qyrgsk"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Kent projeleri ve ödeme takvimi (kurgusal).",
+    "en": "City projects and the payment calendar (fictional).",
+    "ar": "مشاريع المدينة وتقويم الدفعات (افتراضي)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Projeler",
+    "en": "Projects",
+    "ar": "المشاريع"
+  },
+  "keyword": {
+    "tr": "kent projeleri",
+    "en": "city projects",
+    "ar": "مشاريع المدينة"
+  },
+  "text": {},
+  "update": "2026-11-16T22:49:36.967Z",
+  "date": "2026-10-30"
+}

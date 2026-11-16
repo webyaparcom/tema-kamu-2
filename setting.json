@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Sedirkent Belediyesi (kurgusal): e-hizmet dizini, birim rehberi, kent projeleri ve ödeme takvimi. Demo site; resmî bir kurum değildir, görseller temsilîdir.",
+    "en": "Sedirkent Municipality (fictional): e-service directory, department directory, city projects and payment calendar. Demo site; not an official body, images are representative.",
+    "ar": "بلدية سديركنت (افتراضية): دليل الخدمات الإلكترونية ودليل الوحدات ومشاريع المدينة وتقويم الدفعات. موقع تجريبي؛ ليست جهة رسمية والصور تمثيلية."
+  },
+  "keyword": {
+    "tr": "belediye, e-hizmet, birim rehberi, kent projeleri, emlak vergisi takvimi",
+    "en": "municipality, e-services, department directory, city projects, property tax calendar",
+    "ar": "بلدية، خدمات إلكترونية، دليل الوحدات، مشاريع المدينة، تقويم ضريبة العقار"
+  },
+  "category": "Kurumsal",
+  "name": "Sedirkent",
+  "domain": "kamu-2.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "open-sans",
+    "heading": "rubik",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#0E6B58",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "10px",
+    "--mx-radius-md": "16px",
+    "--mx-radius-lg": "22px",
+    "--mx-radius-xl": "30px"
+  },
+  "icon": "icon.png"
+}

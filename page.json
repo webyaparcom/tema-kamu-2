@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": "mnv7q2rlau",
+      "name": {
+        "tr": "e-Hizmet",
+        "en": "e-Services",
+        "ar": "الخدمات"
+      },
+      "description": {
+        "tr": "Belediye hizmetleri dizini (kurgusal demo).",
+        "en": "Directory of municipal services (fictional demo).",
+        "ar": "دليل خدمات البلدية (عرض تجريبي افتراضي)."
+      },
+      "path": "hizmetler",
+      "icon": "apps",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "f1c5wu",
+          "n1qlpi"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Projeler",
+        "en": "Projects",
+        "ar": "المشاريع"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "timeline",
+      "desing": {
+        "header": [],
+        "body": [
+          "z5za87",
+          "rbzxg1",
+          "qyrgsk"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Kent projeleri ve ödeme takvimi (kurgusal).",
+        "en": "City projects and the payment calendar (fictional).",
+        "ar": "مشاريع المدينة وتقويم الدفعات (افتراضي)."
+      }
+    },
+    {
+      "name": {
+        "tr": "Rehber",
+        "en": "Directory",
+        "ar": "الدليل"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 2,
+      "icon": "contact_phone",
+      "desing": {
+        "header": [],
+        "body": [
+          "6gaify",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Birim ve dahili numara rehberi (kurgusal).",
+        "en": "Department and extension directory (fictional).",
+        "ar": "دليل الوحدات والتحويلات (افتراضي)."
+      }
+    }
+  ],
+  "desc": []
+}
