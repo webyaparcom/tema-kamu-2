@@ -2,7 +2,9 @@
   "name": {
     "tr": "Projeler",
     "en": "Projects",
-    "ar": "المشاريع"
+    "ar": "المشاريع",
+    "de": "Projekte",
+    "ru": "Проекты"
   },
   "status": "play",
   "category": "",
@@ -24,7 +26,9 @@
   "description": {
     "tr": "Kent projeleri ve ödeme takvimi (kurgusal).",
     "en": "City projects and the payment calendar (fictional).",
-    "ar": "مشاريع المدينة وتقويم الدفعات (افتراضي)."
+    "ar": "مشاريع المدينة وتقويم الدفعات (افتراضي).",
+    "de": "Stadtprojekte und Zahlungsplan (fiktiv).",
+    "ru": "Городские проекты и график платежей (вымышленные)."
   },
   "spot": {
     "tr": "",
@@ -35,12 +39,16 @@
   "title": {
     "tr": "Projeler",
     "en": "Projects",
-    "ar": "المشاريع"
+    "ar": "المشاريع",
+    "de": "Projekte",
+    "ru": "Проекты"
   },
   "keyword": {
     "tr": "kent projeleri",
     "en": "city projects",
-    "ar": "مشاريع المدينة"
+    "ar": "مشاريع المدينة",
+    "de": "Stadtprojekte",
+    "ru": "городские проекты"
   },
   "text": {},
   "update": "2026-11-16T22:49:36.967Z",

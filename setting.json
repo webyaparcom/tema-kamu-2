@@ -4,12 +4,16 @@
   "description": {
     "tr": "Sedirkent Belediyesi (kurgusal): e-hizmet dizini, birim rehberi, kent projeleri ve ödeme takvimi. Demo site; resmî bir kurum değildir, görseller temsilîdir.",
     "en": "Sedirkent Municipality (fictional): e-service directory, department directory, city projects and payment calendar. Demo site; not an official body, images are representative.",
-    "ar": "بلدية سديركنت (افتراضية): دليل الخدمات الإلكترونية ودليل الوحدات ومشاريع المدينة وتقويم الدفعات. موقع تجريبي؛ ليست جهة رسمية والصور تمثيلية."
+    "ar": "بلدية سديركنت (افتراضية): دليل الخدمات الإلكترونية ودليل الوحدات ومشاريع المدينة وتقويم الدفعات. موقع تجريبي؛ ليست جهة رسمية والصور تمثيلية.",
+    "de": "Gemeinde Sedirkent (fiktiv): E-Service-Verzeichnis, Abteilungsverzeichnis, Stadtprojekte und Zahlungsplan. Demo-Seite; keine offizielle Behörde, Bilder sind repräsentativ.",
+    "ru": "Администрация Седиркент (фиктивная): каталог электронных услуг, справочник отделов, городские проекты и график платежей. Демо-сайт; не является официальным органом, изображения носят иллюстративный характер."
   },
   "keyword": {
     "tr": "belediye, e-hizmet, birim rehberi, kent projeleri, emlak vergisi takvimi",
     "en": "municipality, e-services, department directory, city projects, property tax calendar",
-    "ar": "بلدية، خدمات إلكترونية، دليل الوحدات، مشاريع المدينة، تقويم ضريبة العقار"
+    "ar": "بلدية، خدمات إلكترونية، دليل الوحدات، مشاريع المدينة، تقويم ضريبة العقار",
+    "de": "Gemeinde, E-Dienste, Abteilungsverzeichnis, Stadtprojekte, Grundsteuerkalender",
+    "ru": "муниципалитет, электронные услуги, справочник отделов, городские проекты, календарь налога на имущество"
   },
   "category": "Kurumsal",
   "name": "Sedirkent",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

@@ -2,7 +2,9 @@
   "name": {
     "tr": "Rehber",
     "en": "Directory",
-    "ar": "الدليل"
+    "ar": "الدليل",
+    "de": "Verzeichnis",
+    "ru": "Справочник"
   },
   "status": "play",
   "category": "",
@@ -23,7 +25,9 @@
   "description": {
     "tr": "Birim ve dahili numara rehberi (kurgusal).",
     "en": "Department and extension directory (fictional).",
-    "ar": "دليل الوحدات والتحويلات (افتراضي)."
+    "ar": "دليل الوحدات والتحويلات (افتراضي).",
+    "de": "Verzeichnis der Abteilungen und Durchwahlnummern (fiktiv).",
+    "ru": "Справочник отделов и внутренних номеров (вымышленный)."
   },
   "spot": {
     "tr": "",
@@ -34,12 +38,16 @@
   "title": {
     "tr": "Rehber",
     "en": "Directory",
-    "ar": "الدليل"
+    "ar": "الدليل",
+    "de": "Verzeichnis",
+    "ru": "Справочник"
   },
   "keyword": {
     "tr": "birim rehberi, telefon",
     "en": "directory, phone",
-    "ar": "دليل، هاتف"
+    "ar": "دليل، هاتف",
+    "de": "Abteilungsverzeichnis, Telefon",
+    "ru": "справочник подразделений, телефон"
   },
   "text": {},
   "update": "2026-11-16T22:49:36.979Z",

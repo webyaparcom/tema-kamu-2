@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Kent hizmetlerine erişimi tek dizinde, açık ve anlaşılır kılmak.</p>",
     "en": "<h2>Our mission</h2>\n<p>To make access to city services clear and simple, in one directory.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>جعل الوصول إلى خدمات المدينة واضحًا وبسيطًا في دليل واحد.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>جعل الوصول إلى خدمات المدينة واضحًا وبسيطًا في دليل واحد.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Den Zugang zu städtischen Dienstleistungen in einem einzigen Verzeichnis klar und verständlich zu machen.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Сделать доступ к городским услугам в едином справочнике ясным и понятным.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T22:35:29.010Z",
   "update": "2026-11-16T22:49:36.994Z",
