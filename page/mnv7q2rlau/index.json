@@ -3,17 +3,23 @@
   "name": {
     "tr": "e-Hizmet",
     "en": "e-Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "e-Dienste",
+    "ru": "Электронные услуги"
   },
   "description": {
     "tr": "Belediye hizmetleri dizini (kurgusal demo).",
     "en": "Directory of municipal services (fictional demo).",
-    "ar": "دليل خدمات البلدية (عرض تجريبي افتراضي)."
+    "ar": "دليل خدمات البلدية (عرض تجريبي افتراضي).",
+    "de": "Verzeichnis der kommunalen Dienstleistungen (fiktive Demo).",
+    "ru": "Каталог муниципальных услуг (фиктивная демо-версия)."
   },
   "keyword": {
     "tr": "e-hizmet, başvuru",
     "en": "e-service, application",
-    "ar": "خدمة إلكترونية، طلب"
+    "ar": "خدمة إلكترونية، طلب",
+    "de": "E-Dienstleistung, Antrag",
+    "ru": "электронная услуга, заявка"
   },
   "path": "hizmetler",
   "icon": "apps",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "e-Hizmet",
     "en": "e-Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "e-Dienste",
+    "ru": "Электронные услуги"
   },
   "date": "2026-11-16T22:35:29.363Z",
   "update": "2026-11-16T22:49:36.959Z"

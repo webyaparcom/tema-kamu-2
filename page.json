@@ -5,12 +5,16 @@
       "name": {
         "tr": "e-Hizmet",
         "en": "e-Services",
-        "ar": "الخدمات"
+        "ar": "الخدمات",
+        "de": "e-Dienste",
+        "ru": "Электронные услуги"
       },
       "description": {
         "tr": "Belediye hizmetleri dizini (kurgusal demo).",
         "en": "Directory of municipal services (fictional demo).",
-        "ar": "دليل خدمات البلدية (عرض تجريبي افتراضي)."
+        "ar": "دليل خدمات البلدية (عرض تجريبي افتراضي).",
+        "de": "Verzeichnis der kommunalen Dienstleistungen (fiktive Demo).",
+        "ru": "Каталог муниципальных услуг (фиктивная демо-версия)."
       },
       "path": "hizmetler",
       "icon": "apps",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Projeler",
         "en": "Projects",
-        "ar": "المشاريع"
+        "ar": "المشاريع",
+        "de": "Projekte",
+        "ru": "Проекты"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,14 +58,18 @@
       "description": {
         "tr": "Kent projeleri ve ödeme takvimi (kurgusal).",
         "en": "City projects and the payment calendar (fictional).",
-        "ar": "مشاريع المدينة وتقويم الدفعات (افتراضي)."
+        "ar": "مشاريع المدينة وتقويم الدفعات (افتراضي).",
+        "de": "Stadtprojekte und Zahlungsplan (fiktiv).",
+        "ru": "Городские проекты и график платежей (вымышленные)."
       }
     },
     {
       "name": {
         "tr": "Rehber",
         "en": "Directory",
-        "ar": "الدليل"
+        "ar": "الدليل",
+        "de": "Verzeichnis",
+        "ru": "Справочник"
       },
       "status": "play",
       "id": "iletisim",
@@ -80,7 +90,9 @@
       "description": {
         "tr": "Birim ve dahili numara rehberi (kurgusal).",
         "en": "Department and extension directory (fictional).",
-        "ar": "دليل الوحدات والتحويلات (افتراضي)."
+        "ar": "دليل الوحدات والتحويلات (افتراضي).",
+        "de": "Verzeichnis der Abteilungen und Durchwahlnummern (fiktiv).",
+        "ru": "Справочник отделов и внутренних номеров (вымышленный)."
       }
     }
   ],
